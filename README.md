@@ -3,6 +3,9 @@
 > **Python for Good: Revealing the Philippines Through Data**
 > An SDG exploratory data analysis notebook rendered as an interactive HTML report and deployed via GitHub Pages.
 
+**Live example deployment:**  
+https://ogbinar.com/py-sdg-eda-workshop/
+
 ---
 
 ## Overview
