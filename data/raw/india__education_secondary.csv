@@ -1,8 +1,0 @@
-OBS_VALUE,TIME_FORMAT,UNIT_MULT,COMMENT_OBS,OBS_STATUS,OBS_CONF,AGG_METHOD,DECIMALS,COMMENT_TS,DATA_SOURCE,LATEST_DATA,DATABASE_ID,INDICATOR,REF_AREA,SEX,AGE,URBANISATION,COMP_BREAKDOWN_1,COMP_BREAKDOWN_2,COMP_BREAKDOWN_3,TIME_PERIOD,FREQ,UNIT_MEASURE,UNIT_TYPE
-9.769477,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2000,A,PT,
-31.709999,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2020,A,PT,
-26.889999,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2011,A,PT,
-32.34,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2018,A,PT,
-31.610001,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2022,A,PT,
-11.879478,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2005,A,PT,
-41.34,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,True,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,IND,_T,_T,_T,_Z,_Z,_Z,2023,A,PT,

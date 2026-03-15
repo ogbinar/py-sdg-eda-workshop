@@ -1,6 +1,0 @@
-OBS_VALUE,TIME_FORMAT,UNIT_MULT,COMMENT_OBS,OBS_STATUS,OBS_CONF,AGG_METHOD,DECIMALS,COMMENT_TS,DATA_SOURCE,LATEST_DATA,DATABASE_ID,INDICATOR,REF_AREA,SEX,AGE,URBANISATION,COMP_BREAKDOWN_1,COMP_BREAKDOWN_2,COMP_BREAKDOWN_3,TIME_PERIOD,FREQ,UNIT_MEASURE,UNIT_TYPE
-5.8,P1Y,0,,A,PU,_Z,2,Poverty headcount ratio at national poverty lines (% of population),WB_WDI,True,WB_WDI,WB_WDI_SI_POV_NAHC,MYS,_T,_T,_T,_Z,_Z,_Z,2023,A,PT_POP,
-7.6,P1Y,0,,A,PU,_Z,2,Poverty headcount ratio at national poverty lines (% of population),WB_WDI,False,WB_WDI,WB_WDI_SI_POV_NAHC,MYS,_T,_T,_T,_Z,_Z,_Z,2015,A,PT_POP,
-6.2,P1Y,0,,A,PU,_Z,2,Poverty headcount ratio at national poverty lines (% of population),WB_WDI,False,WB_WDI,WB_WDI_SI_POV_NAHC,MYS,_T,_T,_T,_Z,_Z,_Z,2021,A,PT_POP,
-5.6,P1Y,0,,A,PU,_Z,2,Poverty headcount ratio at national poverty lines (% of population),WB_WDI,False,WB_WDI,WB_WDI_SI_POV_NAHC,MYS,_T,_T,_T,_Z,_Z,_Z,2018,A,PT_POP,
-8.4,P1Y,0,,A,PU,_Z,2,Poverty headcount ratio at national poverty lines (% of population),WB_WDI,False,WB_WDI,WB_WDI_SI_POV_NAHC,MYS,_T,_T,_T,_Z,_Z,_Z,2019,A,PT_POP,

@@ -1,4 +1,0 @@
-OBS_VALUE,TIME_FORMAT,UNIT_MULT,COMMENT_OBS,OBS_STATUS,OBS_CONF,AGG_METHOD,DECIMALS,COMMENT_TS,DATA_SOURCE,LATEST_DATA,DATABASE_ID,INDICATOR,REF_AREA,SEX,AGE,URBANISATION,COMP_BREAKDOWN_1,COMP_BREAKDOWN_2,COMP_BREAKDOWN_3,TIME_PERIOD,FREQ,UNIT_MEASURE,UNIT_TYPE
-22.32,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,CHN,_T,_T,_T,_Z,_Z,_Z,2010,A,PT,
-13.814686,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,False,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,CHN,_T,_T,_T,_Z,_Z,_Z,2000,A,PT,
-31.77,P1Y,0,,A,PU,_Z,2,"Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)",WB_WDI,True,WB_WDI,WB_WDI_SE_SEC_CUAT_UP_ZS,CHN,_T,_T,_T,_Z,_Z,_Z,2020,A,PT,
