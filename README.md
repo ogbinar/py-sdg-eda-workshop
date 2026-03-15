@@ -4,7 +4,7 @@
 > An SDG exploratory data analysis notebook rendered as an interactive HTML report and deployed via GitHub Pages.
 
 **Live example deployment:**  
-https://ogbinar.com/py-sdg-eda-workshop/
+https://ogbinar.github.io/py-sdg-eda-workshop
 
 ---
 
