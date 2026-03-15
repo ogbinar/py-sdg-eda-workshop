@@ -1,0 +1,8 @@
+OBS_VALUE,TIME_FORMAT,UNIT_MULT,COMMENT_OBS,OBS_STATUS,OBS_CONF,AGG_METHOD,DECIMALS,COMMENT_TS,DATA_SOURCE,LATEST_DATA,DATABASE_ID,INDICATOR,REF_AREA,SEX,AGE,URBANISATION,COMP_BREAKDOWN_1,COMP_BREAKDOWN_2,COMP_BREAKDOWN_3,TIME_PERIOD,FREQ,UNIT_MEASURE,UNIT_TYPE
+4.93063,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,False,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2015,A,PT_GDP,
+5.09297,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,False,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2017,A,PT_GDP,
+4.78328,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,False,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2016,A,PT_GDP,
+4.89502,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,False,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2018,A,PT_GDP,
+4.95747,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,False,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2019,A,PT_GDP,
+5.39532,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,False,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2020,A,PT_GDP,
+5.42038,P1Y,0,,A,PU,_Z,2,"Government expenditure on education, total (% of GDP)",WB_WDI,True,WB_WDI,WB_WDI_SE_XPD_TOTL_GD_ZS,USA,_T,_T,_T,_Z,_Z,_Z,2021,A,PT_GDP,

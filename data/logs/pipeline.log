@@ -1,0 +1,233 @@
+2026-03-15 15:02:36,047 | INFO | Pipeline started
+2026-03-15 15:02:36,047 | INFO | Fetching Philippines | education_secondary
+2026-03-15 15:02:36,540 | INFO | Fetching Philippines | internet_users_pct
+2026-03-15 15:02:37,023 | INFO | Fetching Philippines | gdp_per_capita
+2026-03-15 15:02:37,408 | INFO | Fetching Philippines | poverty_headcount
+2026-03-15 15:02:37,932 | INFO | Fetching Philippines | life_expectancy
+2026-03-15 15:02:38,401 | INFO | Fetching Philippines | population_total
+2026-03-15 15:02:38,922 | INFO | Fetching Vietnam | education_secondary
+2026-03-15 15:02:39,479 | INFO | Fetching Vietnam | internet_users_pct
+2026-03-15 15:02:39,892 | INFO | Fetching Vietnam | gdp_per_capita
+2026-03-15 15:02:40,302 | INFO | Fetching Vietnam | poverty_headcount
+2026-03-15 15:02:40,643 | INFO | Fetching Vietnam | life_expectancy
+2026-03-15 15:02:41,010 | INFO | Fetching Vietnam | population_total
+2026-03-15 15:02:41,358 | INFO | Fetching Indonesia | education_secondary
+2026-03-15 15:02:41,838 | INFO | Fetching Indonesia | internet_users_pct
+2026-03-15 15:02:42,286 | INFO | Fetching Indonesia | gdp_per_capita
+2026-03-15 15:02:42,903 | INFO | Fetching Indonesia | poverty_headcount
+2026-03-15 15:02:43,317 | INFO | Fetching Indonesia | life_expectancy
+2026-03-15 15:02:44,563 | INFO | Fetching Indonesia | population_total
+2026-03-15 15:02:45,053 | INFO | Fetching Thailand | education_secondary
+2026-03-15 15:02:45,594 | INFO | Fetching Thailand | internet_users_pct
+2026-03-15 15:02:45,997 | INFO | Fetching Thailand | gdp_per_capita
+2026-03-15 15:02:46,415 | INFO | Fetching Thailand | poverty_headcount
+2026-03-15 15:02:46,866 | INFO | Fetching Thailand | life_expectancy
+2026-03-15 15:02:47,408 | INFO | Fetching Thailand | population_total
+2026-03-15 15:02:47,844 | INFO | Fetching Malaysia | education_secondary
+2026-03-15 15:02:49,251 | INFO | Fetching Malaysia | internet_users_pct
+2026-03-15 15:02:49,655 | INFO | Fetching Malaysia | gdp_per_capita
+2026-03-15 15:02:50,071 | INFO | Fetching Malaysia | poverty_headcount
+2026-03-15 15:02:50,502 | INFO | Fetching Malaysia | life_expectancy
+2026-03-15 15:02:50,874 | INFO | Fetching Malaysia | population_total
+2026-03-15 15:02:51,224 | INFO | Fetching India | education_secondary
+2026-03-15 15:02:52,329 | INFO | Fetching India | internet_users_pct
+2026-03-15 15:02:52,835 | INFO | Fetching India | gdp_per_capita
+2026-03-15 15:02:53,321 | INFO | Fetching India | poverty_headcount
+2026-03-15 15:02:53,864 | INFO | Fetching India | life_expectancy
+2026-03-15 15:02:54,372 | INFO | Fetching India | population_total
+2026-03-15 15:02:54,855 | INFO | Fetching China | education_secondary
+2026-03-15 15:02:55,287 | INFO | Fetching China | internet_users_pct
+2026-03-15 15:02:55,634 | INFO | Fetching China | gdp_per_capita
+2026-03-15 15:02:56,107 | INFO | Fetching China | poverty_headcount
+2026-03-15 15:02:57,575 | INFO | Fetching China | life_expectancy
+2026-03-15 15:02:57,976 | INFO | Fetching China | population_total
+2026-03-15 15:02:58,405 | INFO | Fetching Singapore | education_secondary
+2026-03-15 15:02:58,801 | INFO | Fetching Singapore | internet_users_pct
+2026-03-15 15:02:59,177 | INFO | Fetching Singapore | gdp_per_capita
+2026-03-15 15:02:59,658 | INFO | Fetching Singapore | poverty_headcount
+2026-03-15 15:03:00,079 | INFO | Fetching Singapore | life_expectancy
+2026-03-15 15:03:00,526 | INFO | Fetching Singapore | population_total
+2026-03-15 15:03:00,906 | INFO | Fetching United States | education_secondary
+2026-03-15 15:03:01,274 | INFO | Fetching United States | internet_users_pct
+2026-03-15 15:03:01,665 | INFO | Fetching United States | gdp_per_capita
+2026-03-15 15:03:02,064 | INFO | Fetching United States | poverty_headcount
+2026-03-15 15:03:02,478 | INFO | Fetching United States | life_expectancy
+2026-03-15 15:03:02,845 | INFO | Fetching United States | population_total
+2026-03-15 15:03:03,304 | INFO | Saved curated CSV: data/curated/worldbank_indicators_20260315T070236Z.csv
+2026-03-15 15:03:03,304 | INFO | Saved curated Parquet: data/curated/worldbank_indicators_20260315T070236Z.parquet
+2026-03-15 15:03:03,304 | INFO | Saved manifest: data/curated/manifest_20260315T070236Z.csv
+2026-03-15 15:03:03,304 | INFO | Pipeline finished
+2026-03-15 16:55:20,426 | INFO | Pipeline started
+2026-03-15 16:55:20,426 | INFO | Fetching Philippines | education_secondary
+2026-03-15 16:55:20,920 | INFO | Fetching Philippines | internet_users_pct
+2026-03-15 16:55:21,403 | INFO | Fetching Philippines | gdp_per_capita
+2026-03-15 16:55:21,863 | INFO | Fetching Philippines | poverty_headcount
+2026-03-15 16:55:22,217 | INFO | Fetching Philippines | life_expectancy
+2026-03-15 16:55:22,663 | INFO | Fetching Philippines | population_total
+2026-03-15 16:55:23,106 | INFO | Fetching Vietnam | education_secondary
+2026-03-15 16:55:23,781 | INFO | Fetching Vietnam | internet_users_pct
+2026-03-15 16:55:24,162 | INFO | Fetching Vietnam | gdp_per_capita
+2026-03-15 16:55:25,521 | INFO | Fetching Vietnam | poverty_headcount
+2026-03-15 16:55:26,036 | INFO | Fetching Vietnam | life_expectancy
+2026-03-15 16:55:26,397 | INFO | Fetching Vietnam | population_total
+2026-03-15 16:55:26,796 | INFO | Fetching Indonesia | education_secondary
+2026-03-15 16:55:28,187 | INFO | Fetching Indonesia | internet_users_pct
+2026-03-15 16:55:28,588 | INFO | Fetching Indonesia | gdp_per_capita
+2026-03-15 16:55:29,305 | INFO | Fetching Indonesia | poverty_headcount
+2026-03-15 16:55:29,707 | INFO | Fetching Indonesia | life_expectancy
+2026-03-15 16:55:30,111 | INFO | Fetching Indonesia | population_total
+2026-03-15 16:55:30,567 | INFO | Fetching Thailand | education_secondary
+2026-03-15 16:55:31,103 | INFO | Fetching Thailand | internet_users_pct
+2026-03-15 16:55:31,494 | INFO | Fetching Thailand | gdp_per_capita
+2026-03-15 16:55:31,943 | INFO | Fetching Thailand | poverty_headcount
+2026-03-15 16:55:32,487 | INFO | Fetching Thailand | life_expectancy
+2026-03-15 16:55:32,999 | INFO | Fetching Thailand | population_total
+2026-03-15 16:55:33,392 | INFO | Fetching Malaysia | education_secondary
+2026-03-15 16:55:33,732 | INFO | Fetching Malaysia | internet_users_pct
+2026-03-15 16:55:34,139 | INFO | Fetching Malaysia | gdp_per_capita
+2026-03-15 16:55:34,522 | INFO | Fetching Malaysia | poverty_headcount
+2026-03-15 16:55:34,862 | INFO | Fetching Malaysia | life_expectancy
+2026-03-15 16:55:35,455 | INFO | Fetching Malaysia | population_total
+2026-03-15 16:55:35,839 | INFO | Fetching India | education_secondary
+2026-03-15 16:55:36,207 | INFO | Fetching India | internet_users_pct
+2026-03-15 16:55:36,568 | INFO | Fetching India | gdp_per_capita
+2026-03-15 16:55:36,994 | INFO | Fetching India | poverty_headcount
+2026-03-15 16:55:37,408 | INFO | Fetching India | life_expectancy
+2026-03-15 16:55:37,816 | INFO | Fetching India | population_total
+2026-03-15 16:55:38,239 | INFO | Fetching China | education_secondary
+2026-03-15 16:55:38,628 | INFO | Fetching China | internet_users_pct
+2026-03-15 16:55:39,095 | INFO | Fetching China | gdp_per_capita
+2026-03-15 16:55:39,525 | INFO | Fetching China | poverty_headcount
+2026-03-15 16:55:39,877 | INFO | Fetching China | life_expectancy
+2026-03-15 16:55:40,291 | INFO | Fetching China | population_total
+2026-03-15 16:55:40,637 | INFO | Fetching Singapore | education_secondary
+2026-03-15 16:55:41,094 | INFO | Fetching Singapore | internet_users_pct
+2026-03-15 16:55:41,484 | INFO | Fetching Singapore | gdp_per_capita
+2026-03-15 16:55:41,851 | INFO | Fetching Singapore | poverty_headcount
+2026-03-15 16:55:42,242 | INFO | Fetching Singapore | life_expectancy
+2026-03-15 16:55:42,603 | INFO | Fetching Singapore | population_total
+2026-03-15 16:55:43,018 | INFO | Fetching United States | education_secondary
+2026-03-15 16:55:43,377 | INFO | Fetching United States | internet_users_pct
+2026-03-15 16:55:43,814 | INFO | Fetching United States | gdp_per_capita
+2026-03-15 16:55:44,289 | INFO | Fetching United States | poverty_headcount
+2026-03-15 16:55:44,666 | INFO | Fetching United States | life_expectancy
+2026-03-15 16:55:45,093 | INFO | Fetching United States | population_total
+2026-03-15 16:55:45,517 | INFO | Saved curated CSV: data/curated/worldbank_indicators_20260315T085520Z.csv
+2026-03-15 16:55:45,517 | INFO | Saved curated Parquet: data/curated/worldbank_indicators_20260315T085520Z.parquet
+2026-03-15 16:55:45,517 | INFO | Saved manifest: data/curated/manifest_20260315T085520Z.csv
+2026-03-15 16:55:45,517 | INFO | Pipeline finished
+2026-03-16 04:10:38,050 | INFO | Pipeline started
+2026-03-16 04:10:38,050 | INFO | Fetching Philippines | education_secondary
+2026-03-16 04:10:38,613 | INFO | Fetching Philippines | education_expenditure
+2026-03-16 04:10:39,017 | INFO | Fetching Philippines | internet_users_pct
+2026-03-16 04:10:39,505 | INFO | Fetching Philippines | gdp_per_capita
+2026-03-16 04:10:40,069 | INFO | Fetching Philippines | poverty_headcount
+2026-03-16 04:10:40,506 | INFO | Fetching Philippines | gini_index
+2026-03-16 04:10:41,635 | INFO | Fetching Philippines | life_expectancy
+2026-03-16 04:10:42,056 | INFO | Fetching Philippines | hospital_beds
+2026-03-16 04:10:42,474 | INFO | Fetching Philippines | co2_per_capita
+2026-03-16 04:10:42,832 | INFO | Fetching Philippines | air_passengers
+2026-03-16 04:10:43,240 | INFO | Fetching Philippines | population_total
+2026-03-16 04:10:43,647 | INFO | Fetching Vietnam | education_secondary
+2026-03-16 04:10:44,108 | INFO | Fetching Vietnam | education_expenditure
+2026-03-16 04:10:44,524 | INFO | Fetching Vietnam | internet_users_pct
+2026-03-16 04:10:44,894 | INFO | Fetching Vietnam | gdp_per_capita
+2026-03-16 04:10:45,236 | INFO | Fetching Vietnam | poverty_headcount
+2026-03-16 04:10:45,616 | INFO | Fetching Vietnam | gini_index
+2026-03-16 04:10:45,994 | INFO | Fetching Vietnam | life_expectancy
+2026-03-16 04:10:46,374 | INFO | Fetching Vietnam | hospital_beds
+2026-03-16 04:10:46,792 | INFO | Fetching Vietnam | co2_per_capita
+2026-03-16 04:10:47,122 | INFO | Fetching Vietnam | air_passengers
+2026-03-16 04:10:47,526 | INFO | Fetching Vietnam | population_total
+2026-03-16 04:10:47,922 | INFO | Fetching Indonesia | education_secondary
+2026-03-16 04:10:48,286 | INFO | Fetching Indonesia | education_expenditure
+2026-03-16 04:10:48,670 | INFO | Fetching Indonesia | internet_users_pct
+2026-03-16 04:10:49,048 | INFO | Fetching Indonesia | gdp_per_capita
+2026-03-16 04:10:49,413 | INFO | Fetching Indonesia | poverty_headcount
+2026-03-16 04:10:49,806 | INFO | Fetching Indonesia | gini_index
+2026-03-16 04:10:50,142 | INFO | Fetching Indonesia | life_expectancy
+2026-03-16 04:10:50,505 | INFO | Fetching Indonesia | hospital_beds
+2026-03-16 04:10:50,930 | INFO | Fetching Indonesia | co2_per_capita
+2026-03-16 04:10:51,301 | INFO | Fetching Indonesia | air_passengers
+2026-03-16 04:10:51,665 | INFO | Fetching Indonesia | population_total
+2026-03-16 04:10:52,076 | INFO | Fetching Thailand | education_secondary
+2026-03-16 04:10:52,435 | INFO | Fetching Thailand | education_expenditure
+2026-03-16 04:10:52,817 | INFO | Fetching Thailand | internet_users_pct
+2026-03-16 04:10:53,259 | INFO | Fetching Thailand | gdp_per_capita
+2026-03-16 04:10:53,656 | INFO | Fetching Thailand | poverty_headcount
+2026-03-16 04:10:54,064 | INFO | Fetching Thailand | gini_index
+2026-03-16 04:10:54,484 | INFO | Fetching Thailand | life_expectancy
+2026-03-16 04:10:54,862 | INFO | Fetching Thailand | hospital_beds
+2026-03-16 04:10:56,074 | INFO | Fetching Thailand | co2_per_capita
+2026-03-16 04:10:56,458 | INFO | Fetching Thailand | air_passengers
+2026-03-16 04:10:56,877 | INFO | Fetching Thailand | population_total
+2026-03-16 04:10:57,216 | INFO | Fetching Malaysia | education_secondary
+2026-03-16 04:10:57,576 | INFO | Fetching Malaysia | education_expenditure
+2026-03-16 04:10:57,943 | INFO | Fetching Malaysia | internet_users_pct
+2026-03-16 04:10:58,294 | INFO | Fetching Malaysia | gdp_per_capita
+2026-03-16 04:10:58,849 | INFO | Fetching Malaysia | poverty_headcount
+2026-03-16 04:10:59,207 | INFO | Fetching Malaysia | gini_index
+2026-03-16 04:10:59,621 | INFO | Fetching Malaysia | life_expectancy
+2026-03-16 04:11:00,036 | INFO | Fetching Malaysia | hospital_beds
+2026-03-16 04:11:00,370 | INFO | Fetching Malaysia | co2_per_capita
+2026-03-16 04:11:00,755 | INFO | Fetching Malaysia | air_passengers
+2026-03-16 04:11:01,157 | INFO | Fetching Malaysia | population_total
+2026-03-16 04:11:01,640 | INFO | Fetching India | education_secondary
+2026-03-16 04:11:02,257 | INFO | Fetching India | education_expenditure
+2026-03-16 04:11:02,591 | INFO | Fetching India | internet_users_pct
+2026-03-16 04:11:02,969 | INFO | Fetching India | gdp_per_capita
+2026-03-16 04:11:03,349 | INFO | Fetching India | poverty_headcount
+2026-03-16 04:11:03,686 | INFO | Fetching India | gini_index
+2026-03-16 04:11:04,210 | INFO | Fetching India | life_expectancy
+2026-03-16 04:11:04,603 | INFO | Fetching India | hospital_beds
+2026-03-16 04:11:04,998 | INFO | Fetching India | co2_per_capita
+2026-03-16 04:11:05,449 | INFO | Fetching India | air_passengers
+2026-03-16 04:11:05,890 | INFO | Fetching India | population_total
+2026-03-16 04:11:06,285 | INFO | Fetching China | education_secondary
+2026-03-16 04:11:06,635 | INFO | Fetching China | education_expenditure
+2026-03-16 04:11:06,954 | INFO | Fetching China | internet_users_pct
+2026-03-16 04:11:07,329 | INFO | Fetching China | gdp_per_capita
+2026-03-16 04:11:07,731 | INFO | Fetching China | poverty_headcount
+2026-03-16 04:11:08,205 | INFO | Fetching China | gini_index
+2026-03-16 04:11:08,575 | INFO | Fetching China | life_expectancy
+2026-03-16 04:11:09,063 | INFO | Fetching China | hospital_beds
+2026-03-16 04:11:09,449 | INFO | Fetching China | co2_per_capita
+2026-03-16 04:11:09,844 | INFO | Fetching China | air_passengers
+2026-03-16 04:11:10,233 | INFO | Fetching China | population_total
+2026-03-16 04:11:10,675 | INFO | Fetching Singapore | education_secondary
+2026-03-16 04:11:11,297 | INFO | Fetching Singapore | education_expenditure
+2026-03-16 04:11:11,631 | INFO | Fetching Singapore | internet_users_pct
+2026-03-16 04:11:12,081 | INFO | Fetching Singapore | gdp_per_capita
+2026-03-16 04:11:12,681 | INFO | Fetching Singapore | poverty_headcount
+2026-03-16 04:11:13,147 | INFO | Fetching Singapore | gini_index
+2026-03-16 04:11:13,620 | INFO | Fetching Singapore | life_expectancy
+2026-03-16 04:11:14,092 | INFO | Fetching Singapore | hospital_beds
+2026-03-16 04:11:14,541 | INFO | Fetching Singapore | co2_per_capita
+2026-03-16 04:11:15,011 | INFO | Fetching Singapore | air_passengers
+2026-03-16 04:11:15,393 | INFO | Fetching Singapore | population_total
+2026-03-16 04:11:15,910 | INFO | Fetching Japan | education_secondary
+2026-03-16 04:11:16,323 | INFO | Fetching Japan | education_expenditure
+2026-03-16 04:11:16,765 | INFO | Fetching Japan | internet_users_pct
+2026-03-16 04:11:17,146 | INFO | Fetching Japan | gdp_per_capita
+2026-03-16 04:11:17,554 | INFO | Fetching Japan | poverty_headcount
+2026-03-16 04:11:17,979 | INFO | Fetching Japan | gini_index
+2026-03-16 04:11:18,383 | INFO | Fetching Japan | life_expectancy
+2026-03-16 04:11:18,810 | INFO | Fetching Japan | hospital_beds
+2026-03-16 04:11:19,200 | INFO | Fetching Japan | co2_per_capita
+2026-03-16 04:11:19,662 | INFO | Fetching Japan | air_passengers
+2026-03-16 04:11:20,241 | INFO | Fetching Japan | population_total
+2026-03-16 04:11:20,658 | INFO | Fetching United States | education_secondary
+2026-03-16 04:11:21,057 | INFO | Fetching United States | education_expenditure
+2026-03-16 04:11:21,483 | INFO | Fetching United States | internet_users_pct
+2026-03-16 04:11:21,908 | INFO | Fetching United States | gdp_per_capita
+2026-03-16 04:11:22,283 | INFO | Fetching United States | poverty_headcount
+2026-03-16 04:11:22,690 | INFO | Fetching United States | gini_index
+2026-03-16 04:11:23,115 | INFO | Fetching United States | life_expectancy
+2026-03-16 04:11:23,519 | INFO | Fetching United States | hospital_beds
+2026-03-16 04:11:23,932 | INFO | Fetching United States | co2_per_capita
+2026-03-16 04:11:24,344 | INFO | Fetching United States | air_passengers
+2026-03-16 04:11:24,778 | INFO | Fetching United States | population_total
+2026-03-16 04:11:25,193 | INFO | Saved curated CSV: data/curated/worldbank_indicators_20260315T201038Z.csv
+2026-03-16 04:11:25,193 | INFO | Saved curated Parquet: data/curated/worldbank_indicators_20260315T201038Z.parquet
+2026-03-16 04:11:25,193 | INFO | Saved manifest: data/curated/manifest_20260315T201038Z.csv
+2026-03-16 04:11:25,193 | INFO | Pipeline finished

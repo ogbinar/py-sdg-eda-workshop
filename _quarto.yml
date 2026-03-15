@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    code-fold: true
+    self-contained: true
+    smooth-scroll: true
+
+execute:
+  echo: false
+  warning: false
+  freeze: auto

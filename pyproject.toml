@@ -1,0 +1,18 @@
+[project]
+name = "pycon-sdg-eda"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastparquet>=2025.12.0",
+    "jupyter>=1.1.1",
+    "markdown>=3.10.2",
+    "matplotlib>=3.10.8",
+    "numpy==2.4.3",
+    "pandas==3.0.1",
+    "pgarrow>=0.0.9",
+    "plotly==6.6.0",
+    "requests==2.32.5",
+    "seaborn>=0.13.2",
+]
