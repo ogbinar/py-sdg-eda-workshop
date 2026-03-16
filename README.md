@@ -119,7 +119,7 @@ This is where the SDG comparison happens — cleaning data, building charts, and
 Convert the notebook into a clean interactive HTML report:
 
 ```bash
-quarto render sdg-eda-notebook-final.ipynb
+quarto render 
 ```
 
 Output goes to `docs/index.html`. Rendering settings are in `_quarto.yml`:

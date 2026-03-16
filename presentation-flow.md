@@ -139,7 +139,7 @@ Many participants will not know these controls exist.
 Convert the notebook into a publishable HTML report.
 
 ```bash
-quarto render sdg-eda-notebook-final.ipynb
+quarto render 
 ```
 
 **Warn people before they run it:**
