@@ -2,141 +2,162 @@
   {
     "objectID": "sdg-eda-notebook-final.html",
     "href": "sdg-eda-notebook-final.html",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "",
     "text": "1. Data skills should connect to real problems - At Data Engineering Pilipinas, we believe learning data tools should help people understand issues that affect society.\n2. The Philippines in context - Looking at the Philippines alone can be misleading. - Comparing with regional peers helps us see where we are ahead and where we can improve.\n3. Open data + Python - Global organizations publish development data openly. - With Python, anyone can analyze this data transparently and reproducibly.\n4. What this notebook demonstrates A simple but real analytics workflow: - collecting public data\n- cleaning and reshaping it\n- visualizing patterns\n- interpreting results responsibly\nGoal:\nBuild a small SDG comparison notebook that shows how the Philippines compares with similar countries."
   },
   {
+    "objectID": "sdg-eda-notebook-final.html#why-this-notebook-matters",
+    "href": "sdg-eda-notebook-final.html#why-this-notebook-matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
+    "section": "",
+    "text": "1. Data skills should connect to real problems - At Data Engineering Pilipinas, we believe learning data tools should help people understand issues that affect society.\n2. The Philippines in context - Looking at the Philippines alone can be misleading. - Comparing with regional peers helps us see where we are ahead and where we can improve.\n3. Open data + Python - Global organizations publish development data openly. - With Python, anyone can analyze this data transparently and reproducibly.\n4. What this notebook demonstrates A simple but real analytics workflow: - collecting public data\n- cleaning and reshaping it\n- visualizing patterns\n- interpreting results responsibly\nGoal:\nBuild a small SDG comparison notebook that shows how the Philippines compares with similar countries."
+  },
+  {
+    "objectID": "sdg-eda-notebook-final.html#what-this-notebook-contains",
+    "href": "sdg-eda-notebook-final.html#what-this-notebook-contains",
+    "title": "Python for Good: Revealing the Philippines Through Data",
+    "section": "What This Notebook Contains",
+    "text": "What This Notebook Contains\n30-minute guided walkthrough notebook\nThis notebook is designed for a short live workshop on civic data analysis using open development indicators.\n\nGuiding question\nHow does the Philippines compare with similar countries on digital development and human capability indicators?\n\n\nWhat learners will practice\n\nloading and checking public development data\nreshaping data for analysis\ncomparing countries fairly\nexploring relationships between indicators\nbuilding a simple composite index\ninterpreting results responsibly"
+  },
+  {
     "objectID": "sdg-eda-notebook-final.html#setup",
     "href": "sdg-eda-notebook-final.html#setup",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "0. Setup",
     "text": "0. Setup\nWe start with imports, configuration, and a few helper mappings.\nThe notebook assumes your SDG-style indicator extracts already exist in a local data/ folder.\nExpected long-format fields - country - country_code - indicator - indicator_code - TIME_PERIOD - OBS_VALUE\nIf your filenames differ, update DATA_PATH in the loading cell below.\nTo generate the data file, run your pipeline script (e.g. python run_pipeline.py) before executing this notebook."
   },
   {
     "objectID": "sdg-eda-notebook-final.html#indicator-guide",
     "href": "sdg-eda-notebook-final.html#indicator-guide",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "0.1 Indicator Guide",
     "text": "0.1 Indicator Guide\nBefore we load any data, here is what each indicator measures and why it was chosen.\n\nCountries in this analysis\n\n\n\nCountry\nISO3\nGroup\n\n\n\n\nPhilippines\nPHL\nPhilippines\n\n\nVietnam\nVNM\nASEAN peer\n\n\nIndonesia\nIDN\nASEAN peer\n\n\nThailand\nTHA\nASEAN peer\n\n\nMalaysia\nMYS\nASEAN peer\n\n\nIndia\nIND\nLarge emerging\n\n\nChina\nCHN\nLarge emerging\n\n\nSingapore\nSGP\nAdvanced economy\n\n\nJapan\nJPN\nAdvanced economy\n\n\nUnited States\nUSA\nAdvanced economy\n\n\n\nThe Philippines is treated as its own group so it always stands out clearly in every chart.\n\n\n\nCore Indicators\nThese get the full treatment — trends, scatter, ranking, and composite index.\n\n\n\n\n\n\n\n\n\n\nIndicator\nWhat it measures\nUnit\nSDG\nLatest available (PHL)\n\n\n\n\neducation_secondary\nAdults who completed at least upper secondary school\n% of pop 25+\nSDG 4: Quality Education\n2022\n\n\ninternet_users_pct\nShare of population using the internet\n% of population\nSDG 9: Infrastructure\n2023\n\n\ngdp_per_capita\nEconomic output per person\nCurrent US$\nSDG 8: Decent Work\n2024\n\n\npoverty_headcount\nShare of population below the national poverty line\n% of population\nSDG 1: No Poverty\n2023\n\n\nlife_expectancy\nAverage years a newborn is expected to live\nYears\nSDG 3: Good Health\n2023\n\n\n\n\n\nContext Indicators\nThese appear in a single snapshot chart to broaden the picture.\n\n\n\n\n\n\n\n\n\nIndicator\nWhat it measures\nUnit\nSDG\n\n\n\n\ngini_index\nIncome inequality — 0 is perfectly equal, 100 is perfectly unequal\nScore 0–100\nSDG 10: Reduced Inequalities\n\n\nhospital_beds\nPhysical healthcare capacity\nPer 1,000 people\nSDG 3: Good Health\n\n\nco2_per_capita\nCarbon emissions per person — lower is better\nTonnes per person\nSDG 13: Climate Action\n\n\neducation_expenditure\nGovernment investment in education\n% of GDP\nSDG 16: Governance proxy\n\n\n\n\n\nNot charted\n\n\n\n\n\n\n\nIndicator\nWhy excluded\n\n\n\n\npopulation_total\nUsed as bubble size in scatter plots only\n\n\nair_passengers\nRaw count — not comparable across country sizes (China/India dwarf others)\n\n\n\n\n\n\nA note on data quality\n\nWe use the Last Observed Value (LOV) approach — the most recent available data point up to SNAPSHOT_YEAR. Not every country reports every indicator every year. Always check data_age on hover to see how current each value is.\n\nTwo indicators to watch closely: - poverty_headcount — Singapore and the US have no national poverty line data (NaN). This is expected: high-income countries use different poverty measures. - education_secondary — The Philippines shows a sharp drop in 2021 (57.88 → 32.43). This likely reflects a methodology or survey change, not a real decline. Treat pre- and post-2020 values with caution when reading the trend chart.\n\n\n=== Countries ===\n\n\n\n\n\n\n\n\n\ncountry\niso3\ngroup\n\n\n\n\n0\nIndonesia\nIDN\nASEAN peer\n\n\n1\nMalaysia\nMYS\nASEAN peer\n\n\n2\nThailand\nTHA\nASEAN peer\n\n\n3\nVietnam\nVNM\nASEAN peer\n\n\n4\nJapan\nJPN\nAdvanced economy\n\n\n5\nSingapore\nSGP\nAdvanced economy\n\n\n6\nUnited States\nUSA\nAdvanced economy\n\n\n7\nChina\nCHN\nLarge emerging\n\n\n8\nIndia\nIND\nLarge emerging\n\n\n9\nPhilippines\nPHL\nPhilippines\n\n\n\n\n\n\n\n\n=== Indicators ===\n\n\n\n\n\n\n\n\n\nindicator\nwdi_code\nunit\nsdg\nrole\n\n\n\n\n0\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n% of pop 25+\nSDG 4: Quality Education\ncore\n\n\n1\ninternet_users_pct\nWB_WDI_IT_NET_USER_ZS\n% of population\nSDG 9: Infrastructure\ncore\n\n\n2\ngdp_per_capita\nWB_WDI_NY_GDP_PCAP_CD\nCurrent US$\nSDG 8: Decent Work\ncore\n\n\n3\npoverty_headcount\nWB_WDI_SI_POV_NAHC\n% of population\nSDG 1: No Poverty\ncore\n\n\n4\nlife_expectancy\nWB_WDI_SP_DYN_LE00_IN\nYears\nSDG 3: Good Health\ncore\n\n\n5\ngini_index\nWB_WDI_SI_POV_GINI\nScore 0–100\nSDG 10: Reduced Inequalities\ncontext\n\n\n6\nhospital_beds\nWB_WDI_SH_MED_BEDS_ZS\nPer 1,000 people\nSDG 3: Good Health\ncontext\n\n\n7\nco2_per_capita\nWB_WDI_EN_ATM_CO2E_PC\nTonnes per person\nSDG 13: Climate Action\ncontext\n\n\n8\nair_passengers\nWB_WDI_IS_AIR_PSGR\nCount\nContext only — not charted\ncontext\n\n\n9\neducation_expenditure\nWB_WDI_SE_XPD_TOTL_GD_ZS\n% of GDP\nSDG 16: Governance proxy\ncontext"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#problem-statement",
     "href": "sdg-eda-notebook-final.html#problem-statement",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "1. Problem Statement",
     "text": "1. Problem Statement\nA common public question is whether the Philippines is “doing well” or “falling behind.”\nThat sounds simple, but it is actually a comparison problem.\nTo answer it responsibly, we need to ask:\n\nCompared to whom?\nASEAN peers? Large emerging economies? Advanced economies?\nOn what indicators?\nConnectivity, education, income, longevity, poverty?\nIn what year?\nNot all countries update all indicators at the same time.\n\nSo in this notebook we use a small benchmarking framework: - compare the Philippines with a curated set of peers - focus on a few interpretable indicators - inspect missingness before drawing conclusions - use visualizations to explore patterns rather than force a single “winner”"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#load-data",
     "href": "sdg-eda-notebook-final.html#load-data",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "2. Load Data",
     "text": "2. Load Data\nFor a live walkthrough, it is better to load pre-curated files than fetch everything from an API on the spot.\nThis cell tries a few common file patterns: - one combined long file in data/curated - multiple per-indicator files in data/curated - fallback to data/raw\nUpdate the filename logic if your project uses a different convention.\n\n\n\n\n\n\n\n\n\ncountry\ncountry_code\ncountry_group\nindicator\nindicator_code\nTIME_PERIOD\nOBS_VALUE\nTIME_FORMAT\nUNIT_MULT\nCOMMENT_OBS\nOBS_STATUS\nOBS_CONF\nAGG_METHOD\nDECIMALS\nCOMMENT_TS\nDATA_SOURCE\nLATEST_DATA\nDATABASE_ID\nINDICATOR\nREF_AREA\nSEX\nAGE\nURBANISATION\nCOMP_BREAKDOWN_1\nCOMP_BREAKDOWN_2\nCOMP_BREAKDOWN_3\nFREQ\nUNIT_MEASURE\nUNIT_TYPE\n\n\n\n\n0\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2000\n35.71\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n1\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2003\n48.95\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n2\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2004\n51.10\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n3\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2010\n55.97\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n4\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2013\n58.46\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#inspect-structure",
     "href": "sdg-eda-notebook-final.html#inspect-structure",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "3. Inspect Structure",
     "text": "3. Inspect Structure\nBefore analysis, always inspect: - column names - dtypes - sample rows - whether the data is truly in long format\nThis is a small habit that prevents many downstream mistakes.\n\n\n\n\n\n\n\n\n\ncountry\ncountry_code\ncountry_group\nindicator\nindicator_code\nTIME_PERIOD\nOBS_VALUE\nTIME_FORMAT\nUNIT_MULT\nCOMMENT_OBS\nOBS_STATUS\nOBS_CONF\nAGG_METHOD\nDECIMALS\nCOMMENT_TS\nDATA_SOURCE\nLATEST_DATA\nDATABASE_ID\nINDICATOR\nREF_AREA\nSEX\nAGE\nURBANISATION\nCOMP_BREAKDOWN_1\nCOMP_BREAKDOWN_2\nCOMP_BREAKDOWN_3\nFREQ\nUNIT_MEASURE\nUNIT_TYPE\n\n\n\n\n0\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2000\n35.71\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n1\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2003\n48.95\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n2\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2004\n51.10\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n3\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2010\n55.97\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n4\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2013\n58.46\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n5\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2017\n57.88\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n6\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2021\n32.43\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n7\nPhilippines\nPHL\nPhilippines\neducation_secondary\nWB_WDI_SE_SEC_CUAT_UP_ZS\n2022\n34.46\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nEducational attainment, at least completed upp...\nWB_WDI\nTrue\nWB_WDI\nWB_WDI_SE_SEC_CUAT_UP_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT\nNone\n\n\n8\nPhilippines\nPHL\nPhilippines\neducation_expenditure\nWB_WDI_SE_XPD_TOTL_GD_ZS\n2000\n3.16\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nGovernment expenditure on education, total (% ...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_XPD_TOTL_GD_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT_GDP\nNone\n\n\n9\nPhilippines\nPHL\nPhilippines\neducation_expenditure\nWB_WDI_SE_XPD_TOTL_GD_ZS\n2001\n2.92\nP1Y\n0\nNone\nA\nPU\n_Z\n2\nGovernment expenditure on education, total (% ...\nWB_WDI\nFalse\nWB_WDI\nWB_WDI_SE_XPD_TOTL_GD_ZS\nPHL\n_T\n_T\n_T\n_Z\n_Z\n_Z\nA\nPT_GDP\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndtype\n\n\n\n\ncountry\nstr\n\n\ncountry_code\nstr\n\n\ncountry_group\nstr\n\n\nindicator\nstr\n\n\nindicator_code\nstr\n\n\nTIME_PERIOD\nInt64\n\n\nOBS_VALUE\nfloat64\n\n\nTIME_FORMAT\nstr\n\n\nUNIT_MULT\nint64\n\n\nCOMMENT_OBS\nobject\n\n\nOBS_STATUS\nstr\n\n\nOBS_CONF\nstr\n\n\nAGG_METHOD\nstr\n\n\nDECIMALS\nstr\n\n\nCOMMENT_TS\nstr\n\n\nDATA_SOURCE\nstr\n\n\nLATEST_DATA\nbool\n\n\nDATABASE_ID\nstr\n\n\nINDICATOR\nstr\n\n\nREF_AREA\nstr\n\n\nSEX\nstr\n\n\nAGE\nstr\n\n\nURBANISATION\nstr\n\n\nCOMP_BREAKDOWN_1\nstr\n\n\nCOMP_BREAKDOWN_2\nstr\n\n\nCOMP_BREAKDOWN_3\nstr\n\n\nFREQ\nstr\n\n\nUNIT_MEASURE\nstr\n\n\nUNIT_TYPE\nobject\n\n\n\n\n\n\n\nMissing required columns: None"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#standardize-and-transform-to-wide",
     "href": "sdg-eda-notebook-final.html#standardize-and-transform-to-wide",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "4. Standardize and Transform to Wide",
     "text": "4. Standardize and Transform to Wide\nMost public datasets arrive in long format, which is great for storage and flexible processing.\nFor comparison charts, however, it is often easier to work in wide format, where each indicator becomes a column.\nWe will: - keep only selected countries and indicators - coerce year and value columns - map country groups - pivot to a wide snapshot table\n\n\n\n\n\n\n\n\nindicator\ncountry\ncountry_group\ncountry_code\nair_passengers\neducation_expenditure\neducation_secondary\ngdp_per_capita\ngini_index\nhospital_beds\ninternet_users_pct\nlife_expectancy\npopulation_total\npoverty_headcount\n\n\n\n\n0\nChina\nLarge emerging\nCHN\n619215886.00\n4.00\n31.77\n13303.15\n36.00\n5.00\n92.00\n77.95\n1408975000.00\n0.00\n\n\n1\nIndia\nLarge emerging\nIND\n180415784.23\n4.10\n41.34\n2694.74\n25.50\n1.60\n55.90\n72.00\n1450935791.00\n21.90\n\n\n2\nIndonesia\nASEAN peer\nIDN\n97045784.75\n1.28\n39.10\n4925.43\n34.90\n1.36\n72.78\n71.15\n283487931.00\n9.00\n\n\n3\nJapan\nAdvanced economy\nJPN\n120305972.00\n3.34\n85.18\n32487.08\n32.30\n12.72\n86.98\n84.04\n123975371.00\nNaN\n\n\n4\nMalaysia\nASEAN peer\nMYS\n46698381.00\n3.51\n69.80\n11874.43\n40.70\n2.01\n98.02\n76.66\n35557673.00\n5.80\n\n\n5\nPhilippines\nPhilippines\nPHL\n41501834.00\n3.93\n34.46\n3984.83\n39.30\n0.96\n83.77\n69.83\n115843670.00\n15.50\n\n\n6\nSingapore\nAdvanced economy\nSGP\n47502833.59\n2.19\n79.04\n90674.07\nNaN\n2.65\n94.38\n82.90\n6036860.00\nNaN\n\n\n7\nThailand\nASEAN peer\nTHA\n51920692.00\n2.52\n39.11\n7346.62\n33.50\n2.34\n90.87\n76.41\n71668011.00\n5.40\n\n\n8\nUnited States\nAdvanced economy\nUSA\n941557000.00\n5.42\n95.45\n84534.04\n41.80\n2.74\n93.14\n78.39\n340110988.00\nNaN\n\n\n9\nVietnam\nASEAN peer\nVNM\n55114832.00\n2.89\n39.47\n4717.29\n36.10\n2.55\n84.15\n74.59\n100987686.00\n4.20"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#data-quality-check",
     "href": "sdg-eda-notebook-final.html#data-quality-check",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "5. Data Quality Check",
     "text": "5. Data Quality Check\nResponsible comparison starts with data quality.\nWe should check: - missing values - latest year available per indicator-country - whether some indicators are less current than others\nThis matters because a 2023 internet value and a 2019 poverty value are not equally current.\n\n\n\n\n\n\n\n\nindicator\ncountry\nair_passengers\neducation_expenditure\neducation_secondary\ngdp_per_capita\ngini_index\nhospital_beds\ninternet_users_pct\nlife_expectancy\npopulation_total\npoverty_headcount\n\n\n\n\n0\nChina\n2023\n2023\n2020\n2024\n2022\n2020\n2024\n2023\n2024\n2020\n\n\n1\nIndia\n2023\n2022\n2023\n2024\n2022\n2021\n2022\n2023\n2024\n2011\n\n\n2\nIndonesia\n2023\n2023\n2023\n2024\n2024\n2021\n2024\n2023\n2024\n2024\n\n\n3\nJapan\n2023\n2021\n2020\n2024\n2020\n2020\n2023\n2023\n2024\n&lt;NA&gt;\n\n\n4\nMalaysia\n2023\n2023\n2022\n2024\n2021\n2021\n2024\n2023\n2024\n2023\n\n\n5\nPhilippines\n2023\n2024\n2022\n2024\n2023\n2021\n2023\n2023\n2024\n2023\n\n\n6\nSingapore\n2023\n2024\n2022\n2024\n&lt;NA&gt;\n2021\n2024\n2023\n2024\n&lt;NA&gt;\n\n\n7\nThailand\n2023\n2023\n2024\n2024\n2023\n2021\n2024\n2023\n2024\n2022\n\n\n8\nUnited States\n2023\n2021\n2024\n2024\n2023\n2020\n2023\n2023\n2024\n&lt;NA&gt;\n\n\n9\nVietnam\n2023\n2022\n2023\n2024\n2022\n2017\n2024\n2023\n2024\n2022\n\n\n\n\n\n\n\n\n\nindicator\npoverty_headcount        3\ngini_index               1\ncountry_code             0\ncountry_group            0\ncountry                  0\neducation_expenditure    0\nair_passengers           0\ngdp_per_capita           0\neducation_secondary      0\nhospital_beds            0\ninternet_users_pct       0\nlife_expectancy          0\npopulation_total         0\nName: missing_values, dtype: int64"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#snapshot-comparison",
     "href": "sdg-eda-notebook-final.html#snapshot-comparison",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "6. Snapshot Comparison",
     "text": "6. Snapshot Comparison\nNow we build our first comparison view: a single-year snapshot.\nThis is useful for questions like: - Who is ahead on internet access? - Where does the Philippines sit on education or life expectancy? - Are there visible clusters of countries?\nWe will start with a grouped bar chart for selected indicators."
   },
   {
     "objectID": "sdg-eda-notebook-final.html#scatter-relationships",
     "href": "sdg-eda-notebook-final.html#scatter-relationships",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "7. Scatter Relationships",
     "text": "7. Scatter Relationships\nBar charts help with direct comparison. Scatter plots help with relationships.\nA useful civic question is:\n\nDo countries with stronger digital access also tend to have better human development outcomes?\n\nWe will compare: - internet users vs GDP per capita - internet users vs life expectancy - education vs poverty"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#clustering-view",
     "href": "sdg-eda-notebook-final.html#clustering-view",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "8. Clustering View",
     "text": "8. Clustering View\nWithout doing advanced clustering algorithms, we can still create a visual “clustering view” by plotting two dimensions and coloring country groups.\nThis lets learners see rough patterns: - ASEAN peers may occupy similar bands - advanced economies may separate clearly - the Philippines may sit between groups depending on the indicator pair"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#trends-over-time",
     "href": "sdg-eda-notebook-final.html#trends-over-time",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "9. Trends Over Time",
     "text": "9. Trends Over Time\nSnapshots are helpful, but they can hide movement.\nTo understand development, we also want to ask: - Is the Philippines improving? - Is it improving faster or slower than peers? - On which indicators is the gap narrowing?\nWe will look at time trends from 2000 onward."
   },
   {
     "objectID": "sdg-eda-notebook-final.html#philippines-vs-peers",
     "href": "sdg-eda-notebook-final.html#philippines-vs-peers",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "10. Philippines vs Peers",
     "text": "10. Philippines vs Peers\nA workshop audience usually wants to focus on the Philippines.\nSo here we compare the Philippines against: - the ASEAN peer average - the large emerging average - the advanced economy average\nThis turns many country lines into a clearer benchmarking story."
   },
   {
     "objectID": "sdg-eda-notebook-final.html#ranking-snapshot",
     "href": "sdg-eda-notebook-final.html#ranking-snapshot",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "11. Ranking Snapshot",
     "text": "11. Ranking Snapshot\nRankings are intuitive for a live audience, but they should be handled carefully.\nThey are useful for: - getting a quick sense of position - identifying outliers - spotting where the Philippines is relatively strong or weak\nThey are not the same as a complete development story.\n\n\n\n\n\n\n\n\nindicator\nrank\ncountry\ncountry_group\ninternet_users_pct\n\n\n\n\n0\n1\nMalaysia\nASEAN peer\n98.02\n\n\n1\n2\nSingapore\nAdvanced economy\n94.38\n\n\n2\n3\nUnited States\nAdvanced economy\n93.14\n\n\n3\n4\nChina\nLarge emerging\n92.00\n\n\n4\n5\nThailand\nASEAN peer\n90.87\n\n\n5\n6\nJapan\nAdvanced economy\n86.98\n\n\n6\n7\nVietnam\nASEAN peer\n84.15\n\n\n7\n8\nPhilippines\nPhilippines\n83.77\n\n\n8\n9\nIndonesia\nASEAN peer\n72.78\n\n\n9\n10\nIndia\nLarge emerging\n55.90"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#who-improved-fastest",
     "href": "sdg-eda-notebook-final.html#who-improved-fastest",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "12. Who Improved Fastest",
     "text": "12. Who Improved Fastest\nInstead of only asking “Who is highest?”, we can ask a more dynamic question:\n\nWhich countries improved the fastest over time?\n\nThat is often more meaningful for development analysis.\nWe will compute simple change from the first available year to the latest available year.\n\n\n\n\n\n\n\n\n\ncountry\nindicator\nfirst_year\nlast_year\nfirst_value\nlast_value\ncountry_group\nabsolute_change\nyears_elapsed\navg_annual_change\n\n\n\n\n0\nChina\nair_passengers\n2000\n2023\n61891807.00\n619215886.00\nLarge emerging\n557324079.00\n23\n24231481.70\n\n\n1\nChina\neducation_expenditure\n2023\n2023\n4.00\n4.00\nLarge emerging\n0.00\n0\n&lt;NA&gt;\n\n\n2\nChina\neducation_secondary\n2000\n2020\n13.81\n31.77\nLarge emerging\n17.96\n20\n0.90\n\n\n3\nChina\ngdp_per_capita\n2000\n2024\n969.20\n13303.15\nLarge emerging\n12333.95\n24\n513.91\n\n\n4\nChina\ngini_index\n2002\n2022\n42.00\n36.00\nLarge emerging\n-6.00\n20\n-0.30"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#correlation-matrix",
     "href": "sdg-eda-notebook-final.html#correlation-matrix",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "13. Correlation Matrix",
     "text": "13. Correlation Matrix\nCorrelation does not prove causation, but it helps us explore which indicators move together in this small benchmark set.\nWith a very small country set, this is descriptive rather than definitive."
   },
   {
     "objectID": "sdg-eda-notebook-final.html#composite-development-index",
     "href": "sdg-eda-notebook-final.html#composite-development-index",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "14. Composite Development Index",
     "text": "14. Composite Development Index\nA composite index can be useful for teaching because it combines several indicators into one simplified view.\nBut it must be presented honestly: - it depends on indicator choice - it depends on scaling - it reflects analyst judgment\nHere we build a simple teaching index: - higher is better for internet, education, GDP per capita, life expectancy - lower is better for poverty, so we reverse it - we use min-max scaling across countries - then take the average\n\n\n\n\n\n\n\n\nindicator\ncountry\ncountry_group\ncomposite_development_index\nrank\n\n\n\n\n0\nSingapore\nAdvanced economy\n0.89\n1\n\n\n1\nUnited States\nAdvanced economy\n0.85\n2\n\n\n2\nJapan\nAdvanced economy\n0.73\n3\n\n\n3\nMalaysia\nASEAN peer\n0.58\n4\n\n\n4\nChina\nLarge emerging\n0.51\n5\n\n\n5\nThailand\nASEAN peer\n0.44\n6\n\n\n6\nVietnam\nASEAN peer\n0.39\n7\n\n\n7\nIndonesia\nASEAN peer\n0.24\n8\n\n\n8\nPhilippines\nPhilippines\n0.20\n9\n\n\n9\nIndia\nLarge emerging\n0.06\n10"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#b.-context-indicators",
     "href": "sdg-eda-notebook-final.html#b.-context-indicators",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "14b. Context Indicators",
     "text": "14b. Context Indicators\nThese four indicators broaden the picture beyond the core set.\nThey are shown as a single snapshot chart rather than receiving the full trend/scatter/ranking treatment — the goal is coverage, not deep analysis.\n\n\n\n\n\n\n\nIndicator\nKey thing to notice\n\n\n\n\ngini_index\nHigher = more unequal. Where does the Philippines sit?\n\n\nhospital_beds\nPhysical healthcare capacity per 1,000 people\n\n\nco2_per_capita\nPhilippines is low — a strength worth discussing\n\n\neducation_expenditure\nGovernment prioritization of education (% of GDP)\n\n\n\n\nNote: air_passengers is in the dataset but excluded from this chart because it is an absolute count — China and India dwarf everyone else and make the chart unreadable. This is a deliberate visualization choice."
   },
   {
     "objectID": "sdg-eda-notebook-final.html#geographic-view",
     "href": "sdg-eda-notebook-final.html#geographic-view",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "15. Geographic View",
     "text": "15. Geographic View\nAll previous charts show countries as labels or bars.\nThis choropleth adds spatial context — where are these countries relative to each other, and how does internet access vary across the Asia-Pacific region?\nDesign choices: - Zoomed to Asia-Pacific (center lat 15, lon 115) so the 9-country set fills the frame - All countries shown — not filtered to ASEAN only — for honest regional comparison - internet_users_pct chosen as the indicator because it has complete coverage across all countries and tells a clear geographic story"
   },
   {
     "objectID": "sdg-eda-notebook-final.html#responsible-interpretation",
     "href": "sdg-eda-notebook-final.html#responsible-interpretation",
-    "title": "Why This Notebook Matters",
+    "title": "Python for Good: Revealing the Philippines Through Data",
     "section": "15. Responsible Interpretation",
-    "text": "15. Responsible Interpretation\n\nWhat this notebook does well\n\ncreates transparent, reproducible comparisons\nshows multiple indicators instead of one headline\nencourages learners to inspect missingness and time coverage\nhelps the audience ask better public questions\n\n\n\nWhat this notebook does not do\n\nprove why one country performs better than another\nsettle political debates\ncapture every relevant SDG dimension\nguarantee fairness if source data quality differs across countries\n\n\n\nTakeaways\n\nAlways define the comparison group.\nAlways inspect the year coverage.\nDo not overtrust rankings.\nUse multiple views: snapshot, trend, relationship, and index.\nTreat composite indicators as a starting point, not the final truth.\n\n\n\nWrap-up\n\nBased on these charts, where does the Philippines appear relatively strong, relatively weak, and improving the fastest?"
+    "text": "15. Responsible Interpretation\n\nWhat this notebook does well\n\ncreates transparent, reproducible comparisons\nshows multiple indicators instead of one headline\nencourages learners to inspect missingness and time coverage\nhelps the audience ask better public questions\n\n\n\nWhat this notebook does not do\n\nprove why one country performs better than another\nsettle political debates\ncapture every relevant SDG dimension\nguarantee fairness if source data quality differs across countries\n\n\n\nTakeaways\n\nAlways define the comparison group.\nAlways inspect the year coverage.\nDo not overtrust rankings.\nUse multiple views: snapshot, trend, relationship, and index.\nTreat composite indicators as a starting point, not the final truth.\n\n\n\nDid we answer our question?\n\nBased on these charts, where does the Philippines appear relatively strong, relatively weak, and improving the fastest?"
+  },
+  {
+    "objectID": "sdg-eda-notebook-final.html#call-to-action-ask-better-questions",
+    "href": "sdg-eda-notebook-final.html#call-to-action-ask-better-questions",
+    "title": "Python for Good: Revealing the Philippines Through Data",
+    "section": "16. Call to Action: Ask Better Questions",
+    "text": "16. Call to Action: Ask Better Questions\nData is already here. Tools are already available.\nIt’s not perfect — but it’s enough to start.\nWhat matters now is:\n\nWhat questions are we choosing to ask?\n\n\nQuestions Worth Exploring\nHealthcare Can we predict when hospitals will be overwhelmed?\nEconomy What drives food price spikes — and who gets hit first?\nMobility How much are we losing to traffic — and how can we reduce it?\nDigital Access Does internet access actually improve opportunities?\nDisaster Risk Which communities are most vulnerable?\n\n\nBuild in Public — Don’t Do This Alone\nStart small. Use open data. Use open tools.\nThen:\n\nShare your work\nCollaborate with others\nLearn in public\n\n\nProgress compounds faster when it’s shared.\n\n\n\nCommunities You Can Join\nPython PH https://www.facebook.com/groups/570524223003384/\nData Engineering Pilipinas https://dataengineering.ph/\nR Users Group PH https://www.facebook.com/rugph/\n\n\nClosing Thought\n\nData will not change the country. People asking better questions with data will.\n\nStart small. Stay curious. Share what you find."
   }
 ]
